@@ -1,0 +1,763 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "content/header";
+
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+@import "content/navigation";
+
+
+/*--------------------------------------------------------------
+## Pages & Posts
+--------------------------------------------------------------*/
+
+.insv-conct-content-section {
+  padding: 68px 0;
+}
+#insv-conct-section-1 {
+  padding: 50px 0;
+  max-height: 145px;
+  background: $color_brand_blue_light;
+  
+  @media screen and (max-width: 30em) {
+    max-height: 100%;
+  }
+}
+#insv-conct-section-3 {
+  padding: 50px 0;
+  background: $color_brand_blue_light;
+}
+.insv-conct-content {
+  @include elem-center();
+  padding: 0 10px;
+  
+  @media screen and (min-width: 48em) {
+    padding: 0;
+  }
+}
+
+#resources {
+  
+  .entry-header {
+    padding: 3em 0;
+    @include flexbox();
+    
+    @media screen and (min-width: 48em) {
+      min-height: 390px;
+    }
+    
+    .entry-title {
+      text-align: center;
+      color: $color_brand_blue_light;
+      line-height: 1;
+      text-transform: uppercase;
+      @include elem-center();
+    }
+  }
+    
+  #insv-conct-internal-nav {
+    ul {
+      padding: 0;
+      @include elem-center(70.625, 0);
+      @include clearfix();
+      
+      &:after {
+        @include clearfix-after();
+      }
+      
+      li {
+        list-style: none;
+        float: left;
+        width: 30%;
+        margin: 0 1.5%;
+        
+        @media screen and (max-width: 30em) {
+          width: 90%;
+          margin: 0.3em auto;
+          float: none;
+        }
+        
+        a {
+          display: block;
+          border: 2px solid $color_brand_white;
+          color: $color_brand_white;
+          line-height: 1;
+          padding: 9px 16px;
+          background: transparent;
+          text-decoration: none;
+          text-transform: uppercase;
+          text-align: center;
+          @include border-radius();
+          @include font-size($font_12);
+          @include transitions();
+          
+          &:hover,
+          &:focus,
+          &.active {
+            outline: none;
+            background: $color_brand_white;
+            color: $color_brand_blue_light;
+          }
+        }
+      }
+    }
+  }
+  #loan-programs,
+  #frequently-asked-questions {
+    .insv-conct-section-title {
+      color: $color_brand_red;
+      line-height: 1.5;
+      position: relative;
+      @include font-size($font_20);
+      
+      &:after {
+        content: '';
+        display:block;
+        width: 0;
+        left: 0;
+        border-bottom: 1px solid $color_brand_red;
+        @include transitions(all, 0.5s, linear, 0s);
+      }
+      &.in-view {
+        &:after {
+          width: 25px;
+        }
+      }
+    }
+    .insv-conct-section-value {
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+          list-style: none;
+          border: 2px solid $color_brand_red;
+          margin: 1em 0;
+          opacity: 0.5;
+          @include border-radius();
+          @include transitions();
+          
+          .insv-conct-loan-program-title,
+          .insv-conct-faq-title {
+            padding: 9px 16px;
+            margin: 0;
+            text-align: center;
+            color: $color_brand_red;
+            background: transparent;
+            position: relative;
+            text-transform: uppercase;
+            @include transitions();
+            
+            &:after {
+              content: '\002B';
+              display: block;
+              position: absolute;
+              bottom: 0;
+              top: 0;
+              right: 0;
+              width: 40px;
+              text-align: center;
+              line-height: 0.9;
+              @include font-size( $font_45 );
+            }
+          }
+          
+          .insv-conct-loan-program-content,
+          .insv-conct-faq-content {
+            color: $color_brand_black;
+            padding: 9px 16px;
+            display: none;
+            text-align: center;
+          }
+          
+          &:hover,
+          &.active {
+            opacity: 1;
+            
+            .insv-conct-loan-program-title,
+            .insv-conct-faq-title {
+              background: $color_brand_red;
+              color: $color_brand_white;
+              cursor: pointer;
+              
+              &:after {
+                content: '\002B';
+                line-height: 0.9;
+              }
+            }
+          }
+          &.active {
+            .insv-conct-loan-program-title,
+            .insv-conct-faq-title {
+              &:after {
+                content: '\002D';
+                line-height: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #mortgage-calculators {
+    @include clearfix();
+    @include flexbox();
+    &:after {
+      @include clearfix-after();
+    }
+    .insv-conct-section-title {
+      width: 33%;
+      float: left;
+      color: $color_brand_white;
+      line-height: 1.5;
+      position: relative;
+      @include font-size($font_20);
+      @media screen and (max-width: 48em) {
+        float: none;
+      }
+      
+      &:after {
+        content: '';
+        display:block;
+        width: 0;
+        left: 0;
+        border-bottom: 1px solid $color_brand_white;
+        @include transitions(all, 0.5s, linear, 0s);
+      }
+      &.in-view {
+        &:after {
+          width: 25px;
+        }
+      }
+    }
+    .insv-conct-section-value {
+      float: left;
+      width: 66%;
+      
+      @media screen and (max-width: 48em) {
+        width: 100%;
+        float: none;
+      }
+      
+      ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        @include clearfix();
+        &:after {
+          @include clearfix-after();
+        }
+        
+        li {
+          list-style: none;
+          float: left;
+          width: 33%;
+          vertical-align: middle;
+          height: 165px;
+          
+          @media screen and (max-width: 48em) {
+            width: 100%;
+            margin: 0.3em;
+          }
+          
+          a {
+            display: block;
+            border: 2px solid $color_brand_white;
+            height: 165px;
+            width: 165px;
+            margin: 0 auto;
+            padding: 68px 0px;
+            text-align: center;
+            color: $color_brand_white;
+            text-decoration: none;
+            background: transparent;
+            opacity: 0;
+            @include border-radius(165px);
+            @include transitions();
+            
+            &.show {
+              opacity: 1;
+            }
+            &:hover {
+              background: $color_brand_white;
+              color: $color_brand_blue_light
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.blog {
+  #main {
+    width: 100%;
+   @include clearfix();
+   
+   &:after {
+     @include clearfix-after();
+   } 
+    .entry-header {
+      padding: 3em 0;
+      float: none;
+      clear: both;
+      background: url('/wp-content/themes/noic-concord-theme/_assets/images/blogBG.png') center no-repeat;
+      background-size: cover;
+      width: 100%;
+      @include flexbox();
+      
+      @media screen and (min-width: 48em) {
+        min-height: 390px;
+      }
+      
+      .entry-title {
+        text-align: center;
+        color: $color_brand_blue_light;
+        line-height: 1;
+        text-transform: uppercase;
+        vertical-align: middle;
+        @include elem-center();
+      }
+    }
+   article {
+    //float: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin: 2.5%;
+    padding: 10px;
+      -webkit-box-shadow: 0 0 9px 2px rgba(0,0,0,0);
+    box-shadow: 0 0 9px 2px rgba(0,0,0,0); 
+    @include transitions();    
+    
+    &:hover {
+        -webkit-box-shadow: 0 0 9px 2px rgba(0,0,0,.1);
+      box-shadow: 0 0 9px 2px rgba(0,0,0,.1);     
+    }
+    
+    @media screen and (max-width: 48em) {
+      float: none;
+      width: 100%;
+      margin: 2.5% 0;
+    }
+    
+     header {
+       h2 {
+         margin: 0;
+         padding: 10px;
+
+         a {
+           color: $color_brand_red;
+           text-decoration: none;
+           text-transform: uppercase;
+           @include font-size( $font_30 );
+         }
+       }
+     }
+     .entry-content {
+       padding: 0 10px;
+       
+       .insv-conct-read-more {
+         color: $color_brand_blue_light;
+         text-decoration: none;
+         text-transform: uppercase;
+         @include font-size(1);
+         
+         &:after {
+          content: '';
+          display:block;
+          width: 0;
+          left: 0;
+          border-bottom: 1px solid $color_brand_blue_light;
+          @include transitions(all, 0.5s, linear, 0s);
+         }
+         &:hover {
+           &:after {
+             width: 25px;
+           }
+         }
+       }
+     }
+   }
+   .posts-navigation {
+     float: none;
+     clear: both;
+     padding: 2em 0;
+     @include elem-center();
+     @include flexbox();
+     
+     .nav-links {
+       
+       a {
+        display: inline-block;
+        line-height: 1;
+        padding: 9px 16px;
+        margin: 0 0.3em;
+        text-transform: uppercase;
+        text-decoration: none;
+        width: 120px;
+        background: transparent;
+        border: 2px solid $color_brand_blue_light;
+        color: $color_brand_blue_light;
+        @include border-radius();
+        @include font-size($font_12);
+        @include transitions();
+
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color_brand_white;
+          background: $color_brand_blue_light;
+          border: 2px solid transparent;
+        }
+       }
+     }
+   }
+  }
+}
+.single-post {
+  #masthead {
+    background: rgba(47,47,47,0.68);
+    max-width: 100%;
+    padding: 0 2em;
+  }
+  .entry-header {
+    padding: 3em 0;
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width:48em) {
+      min-height: 525px;
+    }
+    @media screen and (max-width:47.9375em) {
+      min-height: 200px;
+    }
+    .insv-conct-title-wrapper {
+      @include elem-center(48);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 50px;
+      background: rgba(255,255,255,0.6);
+      
+      @media screen and (max-width: 30em) {
+        padding: 10px;
+      }
+      
+      .entry-title {
+        text-align: center;
+        color: $color_brand_red;
+        line-height: 1;
+        text-transform: uppercase;
+        vertical-align: middle;
+        @include font-size( $font_30 );
+        
+        @media screen and (max-width: 48em) {
+          @include font-size( $font_20 );
+        }
+      }
+      .entry-meta {
+        text-align: center;
+        a {
+          color: $color_brand_black;
+          text-decoration: none;
+          @include font-size( 1 );
+        }
+      }
+    }
+  }
+  .entry-content {
+    color: $color_brand_black;
+    padding: 10px 10px;
+    @include elem-center();
+    
+    @media screen and (min-width:48em) {
+      padding: 100px 0;
+    }
+  }
+  .insv-conct-return-to-blog-btn {
+    a {
+      display: block;
+      color: $color_brand_white;
+      background: $color_brand_blue_light;
+      border: 2px solid transparent;
+      line-height: 1;
+      padding: 9px 16px;
+      text-decoration: none;
+      box-shadow: none;
+      text-transform: uppercase;
+      width: 165px;
+      margin: 0 auto;
+      @include border-radius();
+      @include font-size($font_12);
+      @include transitions();
+  
+      &:hover,
+      &:focus {
+        outline: none;
+        background: transparent;
+        border: 2px solid $color_brand_blue_light;
+        color: $color_brand_blue_light;
+      }
+    }
+  }
+}
+#error-404 {
+  .page-header {
+    padding: 3em 0;
+    float: none;
+    clear: both;
+    background: url('/wp-content/themes/noic-concord-theme/_assets/images/blogBG.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    @include flexbox();
+    
+    @media screen and (min-width: 48em) {
+      min-height: 390px;
+    }
+    
+    .page-title {
+      text-align: center;
+      color: $color_brand_blue_light;
+      line-height: 1;
+      text-transform: uppercase;
+      vertical-align: middle;
+      @include elem-center();
+    }
+  } 
+  .page-content {
+    #insv-conct-section-1 {
+      max-height: 100%;
+      .insv-conct-section-wrapper {
+        text-align: center;
+        @include elem-center();
+        
+        p {
+          color: $color_brand_white;
+        }
+        
+        form {
+          input[type="submit"] {
+            display: inline-block;
+            color: $color_brand_blue_light;
+            background: $color_brand_white;
+            border: 2px solid transparent;
+            line-height: 1;
+            padding: 9px 16px;
+            text-decoration: none;
+            text-shadow: none;
+            box-shadow: none;
+            text-transform: uppercase;
+            @include border-radius();
+            @include font-size($font_12);
+            @include transitions();
+
+            &:hover,
+            &:focus {
+              outline: none;
+              background: transparent;
+              border: 2px solid $color_brand_white;
+              color: $color_brand_white;
+            }
+          }
+        }
+      }
+    }
+    #insv-conct-section-2 {
+      max-height: 100%;
+      .insv-conct-section-wrapper {
+        text-align: center;
+        @include elem-center();
+        
+        ul {
+          margin: 0;
+          padding: 0;
+          
+          li {
+            list-style: none;
+            
+            a {
+              color: $color_brand_blue_light;
+              text-decoration: none;
+              @include transitions();
+              
+              &:hover {
+                color: $color_brand_blue_dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+#search-result {
+  .page-header {
+    padding: 3em 0;
+    float: none;
+    clear: both;
+    background: url('/wp-content/themes/noic-concord-theme/_assets/images/blogBG.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    @include flexbox();
+    
+    @media screen and (min-width: 48em) {
+      min-height: 390px;
+    }
+    
+    .page-title {
+      text-align: center;
+      color: $color_brand_blue_light;
+      line-height: 1;
+      text-transform: uppercase;
+      vertical-align: middle;
+      @include elem-center();
+    }
+  }
+  
+   article {
+    //float: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin: 2.5%;
+    padding: 10px;
+      -webkit-box-shadow: 0 0 9px 2px rgba(0,0,0,0);
+    box-shadow: 0 0 9px 2px rgba(0,0,0,0); 
+    @include transitions();    
+    
+    &:hover {
+        -webkit-box-shadow: 0 0 9px 2px rgba(0,0,0,.1);
+      box-shadow: 0 0 9px 2px rgba(0,0,0,.1);     
+    }
+    
+    @media screen and (max-width: 48em) {
+      float: none;
+      width: 100%;
+      margin: 2.5% 0;
+    }
+    
+     header {
+       h2 {
+         margin: 0;
+         padding: 10px;
+
+         a {
+           color: $color_brand_red;
+           text-decoration: none;
+           text-transform: uppercase;
+           @include font-size( $font_30 );
+         }
+       }
+     }
+     .entry-content {
+       padding: 0 10px;
+       
+       .insv-conct-read-more {
+         color: $color_brand_blue_light;
+         text-decoration: none;
+         text-transform: uppercase;
+         @include font-size(1);
+         
+         &:after {
+          content: '';
+          display:block;
+          width: 0;
+          left: 0;
+          border-bottom: 1px solid $color_brand_blue_light;
+          @include transitions(all, 0.5s, linear, 0s);
+         }
+         &:hover {
+           &:after {
+             width: 25px;
+           }
+         }
+       }
+     }
+   }
+}
+#search-no-result {
+  .page-header {
+    padding: 3em 0;
+    float: none;
+    clear: both;
+    background: url('/wp-content/themes/noic-concord-theme/_assets/images/blogBG.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    @include flexbox();
+    
+    @media screen and (min-width: 48em) {
+      min-height: 390px;
+    }
+    
+    .page-title {
+      text-align: center;
+      color: $color_brand_blue_light;
+      line-height: 1;
+      text-transform: uppercase;
+      vertical-align: middle;
+      @include elem-center();
+    }
+  }
+  .page-content {
+    text-align: center;
+    padding: 68px 0;
+    @include elem-center();
+    
+    @media screen and (max-width: 48em) {
+      padding: 0 10px;
+    }
+    
+    form {
+      input[type="submit"] {
+        display: inline-block;
+        color: $color_brand_white;
+        background: $color_brand_blue_light;
+        border: 2px solid transparent;
+        line-height: 1;
+        padding: 9px 16px;
+        text-decoration: none;
+        box-shadow: none;
+        text-transform: uppercase;
+        @include border-radius();
+        @include font-size($font_12);
+        @include transitions();
+
+        &:hover,
+        &:focus {
+          outline: none;
+          background: transparent;
+          border: 2px solid $color_brand_blue_light;
+          color: $color_brand_blue_light;
+        }
+      }
+    }
+  }
+}
+
+#loan-programs,
+#mortgage-calculators,
+#frequently-asked-questions,
+#insv-concp-contact {
+  &:focus {
+    outline: none;
+  }
+}
+
+.internet-explorer {
+  .entry-header {
+    padding: 15% 0!important;
+    vertical-align: middle;
+  }
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "content/footer";

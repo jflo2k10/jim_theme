@@ -1,0 +1,38 @@
+$font__main: sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+/* Font Sizes in ems base 16 */
+$font_60: 3.75; //60px
+$font_45: 2.8125; //45px
+$font_32: 2;//32px
+$font_30: 1.875; //30px
+$font_28: 1.75; //28px
+$font_24: 1.5;//24px
+$font_20: 1.25;//20px
+$font_18: 1.125; //18px
+$font_16: 1; //16px
+$font_14: 0.875; //14px
+$font_12: 0.75; //12px
+$font_11: 0.6875;//11px
+
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('_assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('_assets/fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('_assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('_assets/fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

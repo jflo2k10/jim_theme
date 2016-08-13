@@ -1,0 +1,37 @@
+{
+  "name": "insivia",
+  "version": "0.0.35",
+  "description": "Insivia WordPress Theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/j_floss/insivia-theme.git"
+  },
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "Insivia"
+  ],
+  "author": "Jim @ Insivia",
+  "license": "GPL-2.0",
+  "homepage": "https://bitbucket.org/j_floss/insivia-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "grunt": "^1.0.1",
+    "grunt-bumpup": "^0.6.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sftp-deploy": "^0.2.4",
+    "grunt-shell": "^1.3.0",
+    "node-bourbon": "^4.2.8"
+  }
+}
